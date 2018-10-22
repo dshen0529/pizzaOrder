@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Pete's Pizza</title>
+  </head>
+  <body>
+    <h1>Pete's Pizza</h1>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="pizza.js"></script>
+  </body>
+</html>
+
+    <!--jumbotron-->
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Order Pizza</h1>
+      <p class="lead">Feel free to order!</p>
+    </div>
+  </div>
+    <!--END OF jumbotron-->
+
+    <!--size-->
+    <div class="card" style="width: 18rem;">
+        <div class="card-header">
+            size
+        </div>
+    <ul class="list-group list-group-flush">
+    <div class="form-check">
+    <input class="form-check-input size" type="radio" name="exampleRadios" id="size1" value="average" checked>
+    <label class="form-check-label" for="size1">
+        <li class="list-group-item" id="size1">Personal Pizza</li>
+    </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input size" type="radio" name="exampleRadios" id="size2" value="medium">
+        <label class="form-check-label" for="exampleRadios2">
+            <li class="list-group-item" id="size2">Medium Pizza</li>
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input size" type="radio" name="exampleRadios" id="size3" value="large">
+        <label class="form-check-label" for="exampleRadios3">
+            <li class="list-group-item" id="size3">Large Pizza</li>
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input size" type="radio" name="exampleRadios" id="size4" value="x-large">
+        <label class="form-check-label" for="exampleRadios3">
+            <li class="list-group-item" id="size4">Extra-Large Pizza</li>
+        </label>
+        </ul>
+        </div>
+    </div>
+    <!--end of size-->
+
+    <!--Meats-->
+    <div class="card" style="width: 18rem;">
+            <div class="card-header">
+                Meats
+            </div>
+        <ul class="list-group list-group-flush">
+        <div class="checkbox">
+            <label><input type="checkbox" id="Pep" value="">Pepperoni</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" id="Sau" value="">Sausage</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" id="Can" value="">Canadian Bacon</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" id="Gro" value="">Ground Beef</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" id="Anc" value="">Anchovy</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" id="Chi" value="">Chicken</label>
+        </div>
+    <!--end of Meats-->
+
+    <!--veggies-->
+    <div class="card" style="width: 18rem;">
+            <div class="card-header">
+                Veggies
+            </div>
+        <ul class="list-group list-group-flush">
+        <div class="checkbox">
+            <label><input type="checkbox" id="tom" value="">Tomatoes</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" id="oni" value="">Onions</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" id="oli" value="">Olives</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" id="gre" value="">Green Peppers</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" id="mus" value="">Mushrooms</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" id="pin" value="">Pineapple</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" id="spi" value="">Spinach</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" id="jal" value="">Jalapeno</label>
+        </div>
+    <!--end of veggies-->
+
+    <!--cheese-->
+    <div class="card" style="width: 18rem;">
+            <div class="card-header">
+                Cheese
+            </div>
+        <ul class="list-group list-group-flush">
+        <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="c1" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+            <li class="list-group-item" id="c1">Regular Cheese</li>
+        </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="c2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+                <li class="list-group-item" id="c2">No cheese</li>
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="c3" value="option3">
+            <label class="form-check-label" for="exampleRadios3">
+                <li class="list-group-item" id="c3">extra cheese</li>
+            </label>
+        </div>
+        
+     </div>
+    <!--end of cheese-->
+
+
+    <!--sauce-->
+    <div class="card" style="width: 18rem;">
+            <div class="card-header">
+                sauce
+            </div>
+        <ul class="list-group list-group-flush">
+        <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="s1" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+            <li class="list-group-item" id="s1">Marinara sauce</li>
+        </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="s2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+                <li class="list-group-item" id="s2">White sauce</li>
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="s3" value="option3">
+            <label class="form-check-label" for="exampleRadios3">
+                <li class="list-group-item" id="s3">BBQ sauce</li>
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="s4" value="option3">
+            <label class="form-check-label" for="exampleRadios3">
+                <li class="list-group-item" id="s4">No sauce</li>
+            </label>
+            </ul>
+            </div>
+        </div>
+    <!--end of sauce-->
+
+
+    <!--crust-->
+    <div class="card" style="width: 18rem;">
+            <div class="card-header">
+                Crust
+            </div>
+        <ul class="list-group list-group-flush">
+        <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="t1" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+            <li class="list-group-item" id="t1">Plain crust</li>
+        </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="t2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+                <li class="list-group-item" id="t2">Garlic butter crust</li>
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="t3" value="option3">
+            <label class="form-check-label" for="exampleRadios3">
+                <li class="list-group-item" id="t3">Cheese stuffed crust</li>
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="t4" value="option3">
+            <label class="form-check-label" for="exampleRadios3">
+                <li class="list-group-item" id="t4">spicy crust</li>
+            </label>
+        <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="t5" value="option3">
+                <label class="form-check-label" for="exampleRadios3">
+                    <li class="list-group-item" id="t5">house special crust</li>
+                </label>
+            </ul>
+            </div>
+        </div>
+    <!--end of crust-->
+
+    <!--Buttons-->
+<button type="button" onclick="send()" class="btn btn-primary btn-lg">Order</button>
+<button type="button" onclick="cancel()" class="btn btn-primary btn-lg">Cancel</button>
+    <!--end of buttons-->
+
