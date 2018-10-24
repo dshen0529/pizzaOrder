@@ -28,7 +28,7 @@
 
 // //check if meats are selected
  function validateMeat(){
- var meats =[document.getElementById('Pep'),document.getElementById('Sau'),document.getElementById('Can'),document.getElementById('Gro'),document.getElementById('Anc'),document.getElementById('Chi')];
+ var meats =[document.getElementsByClassName(meats)];
  var error=0;
 
  for(i=0;i<meats.length;i++){
@@ -47,7 +47,7 @@
 
 // //check if veggies are selected
  function validateVeg(){
- var veggies =[document.getElementById('tom'),document.getElementById('oni'),document.getElementById('oli'),document.getElementById('gre'),document.getElementById('mus'),document.getElementById('pin'),document.getElementById('spi'),document.getElementById('jal')];
+ var veggies =[document.getElementsByClassName(veggies)];
  var error=0;
 
  for(i=0;i<veggies.length;i++){
