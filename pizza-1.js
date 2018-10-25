@@ -1,39 +1,39 @@
 // //check if meats are selected
-function validateMeat(){
-    var meats =[document.getElementsByClassName(meats)];
-    var error=0;
+// function validateMeat(){
+//     var meats =[document.getElementsByClassName(meats)];
+//     var error=0;
    
-        for(i=0;i<meats.length;i++){
-            if (!meats[i].checked){
-                meats[i].style.backgroundColor="red";
-                error++;
-            }
-        };
-        if (error===0){
-            return true; 
-        } else {
-            return false;
-        }
-    }
+//         for(i=0;i<meats.length;i++){
+//             if (meats[i].checked=" "){
+//                 alert("please select a type of meat!");
+//                 error++;
+//             }
+//         };
+//         if (error===0){
+//             return true; 
+//         } else {
+//             return false;
+//         }
+//     };
    
    
    // //check if veggies are selected
-    function validateVeg(){
-    var veggies =[document.getElementsByClassName(veggies)];
-    var error=0;
+    // function validateVeg(){
+    // var veggies =[document.getElementsByClassName(veggies)];
+    // var error=0;
    
-        for(i=0;i<veggies.length;i++){
-            if (!veggies[i].checked){
-                veggies[i].style.backgroundColor="red";
-                error++;
-            }
-            };
-        if (error===0){
-            return true;
-        } else {
-            return false;
-        }
-    }
+    //     for(i=0;i<veggies.length;i++){
+    //         if (veggies[i].value=""){
+    //             alert("please select a type of veggies!");
+    //             error++;
+    //         }
+    //         };
+    //     if (error===0){
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // };
     
 
 function getReceipt(){
@@ -46,7 +46,7 @@ function getReceipt(){
 			var selectedSize = sizeArray[i].value;
 			txt1 = txt1+selectedSize+"<br>";
 		}
-	}
+	
 	if (selectedSize === "Small Pizza") {
 		sizeTotal = 6;
 	} else if (selectedSize === "Medium Pizza") {
@@ -56,6 +56,7 @@ function getReceipt(){
 	} else if (selectedSize === "Extra-Large Pizza") {
 		sizeTotal = 16;
 	}
+    }
 	runningTotal = sizeTotal;
 	console.log(selectedSize+" = $"+ sizeTotal +".00");
 	console.log("Size customer chose: "+ selectedSize);
@@ -69,13 +70,36 @@ function getMeat(runningTotal,txt1){
     var meatsTotal=0;
     var selectedMeats=[];
     var meats=document.getElementsByClassName("meats");
-    for (var j=0;j<meats.length;j++){
-        if (meats[j].checked){
-        selectedMeats.push(meats[j].value);
-        console.log("selected meat item: " + meats[j].value + " ")
-        txt1 +=  selectedMeats + "<br>"; //text1 = text1+meatArray[j].value+"<br>"?
-            }
-        }
+    var j=0;
+    //var choiceBool = false
+    for (var i=0;i<meats.length;i++){
+        
+        if (meats[i].checked){
+            //choiceBool = true;
+            j=j+1;
+        console.log(j);
+        selectedMeats.push(meats[i].value);
+        console.log("selected meat item: " + meats[i].value + " ")
+        } 
+        if (meats[i].checked==false){
+          
+            console.log(i);
+        } 
+    }alert ("asfd");
+    
+    //var error=0;
+  //  for (var i=0;i<meats.length;i++){
+ //       if (meats[i].checked==false){
+   //         error ++;
+     //       console.log(error);
+       // } 
+ //   }alert ("asfd");
+    
+
+    //comparing 'if checked' with a number (if use else if)? 
+    
+        
+        
     //price for meat://
         var meatCount = selectedMeats.length;
 	if (meatCount > 1) {
@@ -88,8 +112,9 @@ function getMeat(runningTotal,txt1){
 	console.log("Meats price = $"+meatsTotal+".00");
 	console.log("meats: "+selectedMeats+" ");
     console.log("subtotal: $"+runningTotal+".00");
+    txt1 +=  selectedMeats + " "; //text1 = text1+meatArray[j].value+"<br>"?
     getVeggies(runningTotal,txt1);
-    }
+    };
 
 function getVeggies(runningTotal,txt1){
     var veggiesTotal=0;
@@ -99,7 +124,10 @@ function getVeggies(runningTotal,txt1){
         if (veggies[a].checked){
         selectedVeggies.push(veggies[a].value);
         txt1 = txt1 + selectedVeggies + "<br>";
-    }}
+        } else if (veggies[a].value= null){
+            alert("please select a type of veggie!");
+            break; //? auto refresh page after break
+        }
     
         var veggiesCount=selectedVeggies.length;
         if (veggiesCount>1){
@@ -107,13 +135,14 @@ function getVeggies(runningTotal,txt1){
         }else{
             veggiesTotal=0;
         }
+    }
 
 	runningTotal += veggiesTotal;
 	console.log("Price for selected veggies = $"+veggiesTotal+".00");
 	console.log("Selected Veggies: "+selectedVeggies+"<br>");
     console.log("Subtotal: $"+runningTotal+".00");
     getCheese(runningTotal,txt1);
-}
+};
 
 function getCheese(runningTotal,txt1){
     var cheeseTotal=0;
@@ -122,7 +151,7 @@ function getCheese(runningTotal,txt1){
         if (cheeseArray[b].checked){
         var selectedCheese =cheeseArray[b].value;
         txt1 = txt1 + selectedCheese + "<br>";
-    }}
+    }
     
     if (selectedCheese==="Regular Cheese"){
         cheeseTotal = 1;
@@ -131,15 +160,13 @@ function getCheese(runningTotal,txt1){
     }else if (selectedCheese==="extra cheese"){
         cheeseTotal = 1.2 ;
     }
+    }   
 	runningTotal += cheeseTotal;
 	console.log("Price for selected cheese = $"+ cheeseTotal +".00");
 	console.log("customer selected: "+ selectedCheese);
     console.log("Subtotal: $"+runningTotal+".00");
     getSauce(runningTotal,txt1);
-}
-function newFunction(cheeseArray, b) {
-    return cheeseArray[b].value;
-}
+};  
 
 function getSauce(runningTotal,txt1){
     var sauceTotal=0;
@@ -148,7 +175,7 @@ function getSauce(runningTotal,txt1){
         if (sauceArray[c].checked){
         var selectedSauce = sauceArray[c].value;
         txt1 = txt1 + selectedSauce + "<br>";
-    }}
+    }
     
     if (selectedSauce==="Marinara sauce"){
         sauceTotal = 2;
@@ -159,12 +186,13 @@ function getSauce(runningTotal,txt1){
     }else if (selectedSauce==="No sauce"){
         sauceTotal = 2.3;
     }
+    }
 	runningTotal += sauceTotal;
 	console.log(selectedSauce+" = $"+sauceTotal+".00");
 	console.log("selectedSauce: "+ selectedSauce);
     console.log("subtotal: $"+runningTotal+".00");
     getCrust(runningTotal,txt1);
-}
+};
 
 function getCrust(runningTotal,txt1){
     var crustTotal=0;
@@ -173,7 +201,7 @@ function getCrust(runningTotal,txt1){
         if (crustArray[d].checked){
         var selectedCrust = crustArray[d].value;
         txt1 = txt1 + selectedCrust + "! :)";
-    }}
+    }
     
     if (selectedCrust==="Plain crust"){
         crustTotal = 1;
@@ -186,6 +214,7 @@ function getCrust(runningTotal,txt1){
     }else if (selectedCrust==="house special crust"){
         crustTotal = 1.4 
     }
+    }
     
     runningTotal += crustTotal;
     runningTotal= runningTotal.toFixed(2);
@@ -194,6 +223,4 @@ function getCrust(runningTotal,txt1){
     console.log("subtotal: $"+runningTotal+".00");
     document.getElementById("showText").innerHTML=txt1;
 	document.getElementById("totalPrice").innerHTML = "</h3>Total: <strong>$"+runningTotal+" "+"</strong></h3>";
-    
-}
-
+};
