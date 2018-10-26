@@ -4,19 +4,14 @@
 //     var error=0;
    
 //         for(i=0;i<meats.length;i++){
-//             if (meats[i].checked=" "){
-//                 alert("please select a type of meat!");
-//                 error++;
-//             }
-//         };
-//         if (error===0){
-//             return true; 
-//         } else {
-//             return false;
-//         }
-//     };
-   
-   
+//             if (meats[i].checked!==" "){
+//                 error === 0} else {
+//                  error !=== 0}
+//               if (error!===0){
+//              prompt("alert message")
+//                  };
+    
+     
    // //check if veggies are selected
     // function validateVeg(){
     // var veggies =[document.getElementsByClassName(veggies)];
@@ -71,37 +66,28 @@ function getMeat(runningTotal,txt1){
     var selectedMeats=[];
     var meats=document.getElementsByClassName("meats");
     var j=0;
-    //var choiceBool = false
     for (var i=0;i<meats.length;i++){
-        
         if (meats[i].checked){
-            //choiceBool = true;
-            j=j+1;
-        console.log(j);
+            j++;
         selectedMeats.push(meats[i].value);
         console.log("selected meat item: " + meats[i].value + " ")
         } 
-        if (meats[i].checked==false){
-          
-            console.log(i);
         } 
-    }alert ("asfd");
-    
-    //var error=0;
-  //  for (var i=0;i<meats.length;i++){
- //       if (meats[i].checked==false){
+//        if (meats[i].checked==false){
+//          
+//            console.log(i);
+//        } 
+//    }alert ("asfd");
+    // var error=0;
+    // for (var i=0;i<meats.length;i++){
+    //     if (meats[i].checked==false){
    //         error ++;
-     //       console.log(error);
-       // } 
- //   }alert ("asfd");
+    if(j === 0){   
+        console.log("error");
+        alert ("you did not select meat?");
+    };
     
-
-    //comparing 'if checked' with a number (if use else if)? 
-    
-        
-        
-    //price for meat://
-        var meatCount = selectedMeats.length;
+    var meatCount = selectedMeats.length;
 	if (meatCount > 1) {
 		meatsTotal = (meatCount - 1);
 	} else {
